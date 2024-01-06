@@ -16,6 +16,5 @@ while True:
             break
         # Exit
         elif selection == "3":
-            print("Exit")
-            break
+            functions.exit_function()
     break
