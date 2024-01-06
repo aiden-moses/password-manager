@@ -12,7 +12,7 @@ while True:
             break
         # Register
         elif selection == "2":
-            print("Register")
+            functions.register_function()
             break
         # Exit
         elif selection == "3":
