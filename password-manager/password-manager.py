@@ -1,12 +1,19 @@
 import functions
+import time
 
 while True:
     # Login Loop
     while True:
         selection = functions.login_menu_function()
         if selection == "1":
-            username = functions.login_function()
-            break
+            funct = functions.login_function()
+            if funct == "error":
+                functions.clear_function()
+                print("Error: You have not registered yet.")
+                time.sleep(2)
+            else:
+                username = funct
+                break
         elif selection == "2":
             functions.register_function()
         elif selection == "3":
