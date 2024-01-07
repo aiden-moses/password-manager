@@ -5,17 +5,19 @@ import time
 
 
 def login_function():
+    # Clear Screen
+    functions.clear_function()
     # Request Information
     print("Enter your username:")
     entered_username = input(">> ")
     print("Enter your password: ")
     entered_password = input(">> ")
-
+    # Clear Screen
+    functions.clear_function()
     # Define User Information
     user_directory = f"data/{entered_username}"
     file_name = "user_data.json"
     file_directory = user_directory + "/" + file_name
-
     # Open Files
     try:
         with open(file_directory, 'r') as file:
