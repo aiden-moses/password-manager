@@ -15,7 +15,13 @@ while True:
                 username = funct
                 break
         elif selection == "2":
-            functions.register_function()
+            funct = functions.register_function()
+            if funct == "error":
+                functions.clear_function()
+                print("Error: Username already registered.")
+                time.sleep(2)
+            else:
+                pass
         elif selection == "3":
             functions.exit_function()
     # Main Menu Loop
