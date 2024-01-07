@@ -1,6 +1,5 @@
 # Directory Imports
 import functions
-import time
 
 # Main Loop
 while True:
@@ -9,10 +8,8 @@ while True:
         selection = functions.login_menu_function()
         # Login
         if selection == "1":
-            if functions.login_function() == "success":
-                functions.clear_function()
-                print("Logged in.")
-                break
+            username = functions.login_function()
+            break
         # Register
         elif selection == "2":
             functions.register_function()
@@ -21,16 +18,15 @@ while True:
             functions.exit_function()
     # Main Menu Loop
     while True:
+        functions.clear_function()
         selection = functions.main_menu_function()
+        cipher = functions.security_init_function(username)
         # View Logins
         if selection == "1":
-            print("View Logins")
-            time.sleep(2)
+            functions.view_logins_function(username, cipher)
         # New Login
         elif selection == "2":
-            print("New Login")
-            time.sleep(2)
-            functions.exit_function
+            functions.new_login_function(cipher, username)
         # Exit
         elif selection == "3":
             functions.exit_function()

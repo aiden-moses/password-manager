@@ -26,7 +26,7 @@ def login_function():
         stored_password_hash = user_data.get('hashed_password')
         entered_password_hash = functions.hash_function(entered_password)
         if entered_username == stored_username and entered_password_hash == stored_password_hash: # noqa
-            return "success"
+            return entered_username
         else:
             functions.clear_function()
             print("Error: Invalid login credentials invalid.")

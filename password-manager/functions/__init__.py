@@ -5,3 +5,8 @@ from .login.register import register_function # noqa
 from .security.hash import hash_function # noqa
 from .login.login import login_function # noqa
 from .menu.main_menu import main_menu_function # noqa
+from .security.security_init import security_init_function # noqa
+from .security.encrypt import encrypt_function # noqa
+from .security.decrypt import decrypt_function # noqa
+from .menu.new_login import new_login_function # noqa
+from .menu.view_logins import view_logins_function # noqa
